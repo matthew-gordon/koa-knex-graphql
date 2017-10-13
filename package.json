@@ -1,0 +1,7 @@
+{
+  "name": "koa-knex-graphql-postgres",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Matthew Gordon <laxredemption5525@gmail.com>",
+  "license": "MIT"
+}
