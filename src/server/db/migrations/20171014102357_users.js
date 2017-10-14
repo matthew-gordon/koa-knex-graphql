@@ -1,11 +1,24 @@
 exports.up = function(knex, Promise) {
-  return knex.schema.createTable('users', (table) => {
+  return knex.schema
+
+  .createTable('companies', (table) => {
     table.increments()
-    table.text('firstName').notNullable().unique()
-    table.integer('age')
+    table.string('name').notNullable()
+    table.text('description').unique().notNullable()
   })
+
+  .createTable('users', (table) => {
+    table.increments()
+    table.string('firstName').notNullable()
+    table.integer('age').notNullable()
+    table.integer('company_id').defaultTo(null).references('companies.id')
+      .onDelete('CASCADE')
+  })
+
 }
 
 exports.down = function(knex, Promise) {
-  return knex.schema.dropTable('users')
+  return knex.schema
+    .raw('DROP TABLE IF EXISTS companies CASCADE;')
+    .raw('DROP TABLE IF EXISTS users CASCADE;')
 }
