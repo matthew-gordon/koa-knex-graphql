@@ -8,10 +8,12 @@ const app = new Koa()
 const port = process.env.PORT || 3000
 const router = new Router()
 
+const GraphQLSchema = require('./graphql/schema')
+
 app.use(bodyParser())
 
 router.get('/graphiql', graphiqlKoa({ endpointURL: '/graphql'}))
-// router.post('/graphql', graphqlKoa({ schema: GraphQLSchema}))
+router.post('/graphql', graphqlKoa({ schema: GraphQLSchema}))
 
 app.use(router.routes())
 app.use(router.allowedMethods())
