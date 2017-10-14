@@ -11,3 +11,5 @@
 ```knex seed:run```
 
 ```yarn start (node start)```
+
+```navigate to localhost:3000/graphiql```
