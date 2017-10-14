@@ -1,6 +1,8 @@
 ```clone repo```
 
-```yarn install (node install)```
+```cd koa-knex-graphql```
+
+```yarn install (npm install)```
 
 ```createdb koa-knex-graphql```
 
@@ -10,6 +12,6 @@
 
 ```knex seed:run```
 
-```yarn start (node start)```
+```yarn start (npm start)```
 
 ```navigate to localhost:3000/graphiql```
