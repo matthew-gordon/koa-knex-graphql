@@ -1,16 +1,20 @@
 const graphql = require('graphql')
 const _ = require('lodash')
+
+const queries = require('../db/queries')
+
 const {
   GraphQLObjectType,
   GraphQLString,
   GraphQLInt,
-  GraphQLSchema
+  GraphQLList,
+  GraphQLSchema,
 } = graphql
 
 const UserType = new GraphQLObjectType({
   name: 'User',
   fields: {
-    id: { type: GraphQLString },
+    id: { type: GraphQLInt },
     firstName: { type: GraphQLString },
     age: { type: GraphQLInt }
   }
@@ -19,11 +23,17 @@ const UserType = new GraphQLObjectType({
 const RootQuery = new GraphQLObjectType({
   name: 'RootQueryType',
   fields: {
+    paginatedUsers: {
+      type: new GraphQLList(UserType),
+      resolve(parentValue, args) {
+        return queries.getAll()
+      }
+    },
     user: {
       type: UserType,
-      args: { id: { type: GraphQLString } },
+      args: { id: { type: GraphQLInt } },
       resolve(parentValue, args) {
-        return _.find(users, { id: args.id })
+        return queries.getSingle(args.id)
       }
     }
   }

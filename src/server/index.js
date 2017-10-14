@@ -19,7 +19,7 @@ app.use(router.routes())
 app.use(router.allowedMethods())
 
 const server = app.listen(port, () => {
-  console.log(`Listening on port ${port}...`);
+  console.log(`Listening on port ${port}...`)
 })
 
 module.exports = server
