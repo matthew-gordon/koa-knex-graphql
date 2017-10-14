@@ -2,6 +2,10 @@
 # yarn lockfile v1
 
 
+"@types/graphql@^0.9.0":
+  version "0.9.4"
+  resolved "https://registry.yarnpkg.com/@types/graphql/-/graphql-0.9.4.tgz#cdeb6bcbef9b6c584374b81aa7f48ecf3da404fa"
+
 accepts@^1.2.2:
   version "1.3.4"
   resolved "https://registry.yarnpkg.com/accepts/-/accepts-1.3.4.tgz#86246758c7dd6d21a6474ff084a4740ec05eb21f"
@@ -12,6 +16,29 @@ accepts@^1.2.2:
 any-promise@^1.1.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/any-promise/-/any-promise-1.3.0.tgz#abc6afeedcea52e809cdc0376aed3ce39635d17f"
+
+apollo-server-core@^1.1.6:
+  version "1.1.6"
+  resolved "https://registry.yarnpkg.com/apollo-server-core/-/apollo-server-core-1.1.6.tgz#be45833e15a6fa28e52bc7e853cd77dfb2558da7"
+  dependencies:
+    apollo-tracing "^0.0.7"
+
+apollo-server-koa@^1.1.6:
+  version "1.1.6"
+  resolved "https://registry.yarnpkg.com/apollo-server-koa/-/apollo-server-koa-1.1.6.tgz#2462b43e75d057c6dd1870f0f11103dfe9a6e809"
+  dependencies:
+    apollo-server-core "^1.1.6"
+    apollo-server-module-graphiql "^1.1.6"
+
+apollo-server-module-graphiql@^1.1.6:
+  version "1.1.6"
+  resolved "https://registry.yarnpkg.com/apollo-server-module-graphiql/-/apollo-server-module-graphiql-1.1.6.tgz#9a0c8ff7ed7c4fff313065db388f08b1e7b6f9b9"
+
+apollo-tracing@^0.0.7:
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/apollo-tracing/-/apollo-tracing-0.0.7.tgz#78466cfefdb52a0802a57b488d26a1a67a25909f"
+  dependencies:
+    graphql-tools "^1.1.0"
 
 bytes@3.0.0:
   version "3.0.0"
@@ -73,6 +100,10 @@ depd@1.1.1, depd@^1.1.0, depd@~1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/depd/-/depd-1.1.1.tgz#5783b4e1c459f06fa5ca27f991f3d06e7a310359"
 
+deprecated-decorator@^0.1.6:
+  version "0.1.6"
+  resolved "https://registry.yarnpkg.com/deprecated-decorator/-/deprecated-decorator-0.1.6.tgz#00966317b7a12fe92f3cc831f7583af329b86c37"
+
 destroy@^1.0.3:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/destroy/-/destroy-1.0.4.tgz#978857442c44749e4206613e37946205826abd80"
@@ -92,6 +123,21 @@ escape-html@~1.0.1:
 fresh@^0.5.0:
   version "0.5.2"
   resolved "https://registry.yarnpkg.com/fresh/-/fresh-0.5.2.tgz#3d8cadd90d976569fa835ab1f8e4b23a105605a7"
+
+graphql-tools@^1.1.0:
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/graphql-tools/-/graphql-tools-1.2.3.tgz#079bf4d157e46c0a0bae9fec117e0eea6e03ba2c"
+  dependencies:
+    deprecated-decorator "^0.1.6"
+    uuid "^3.0.1"
+  optionalDependencies:
+    "@types/graphql" "^0.9.0"
+
+graphql@^0.11.7:
+  version "0.11.7"
+  resolved "https://registry.yarnpkg.com/graphql/-/graphql-0.11.7.tgz#e5abaa9cb7b7cccb84e9f0836bf4370d268750c6"
+  dependencies:
+    iterall "1.1.3"
 
 http-assert@^1.1.0:
   version "1.3.0"
@@ -128,6 +174,10 @@ is-generator-function@^1.0.3:
 isarray@0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/isarray/-/isarray-0.0.1.tgz#8a18acfca9a8f4177e09abfc6038939b05d1eedf"
+
+iterall@1.1.3:
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/iterall/-/iterall-1.1.3.tgz#1cbbff96204056dde6656e2ed2e2226d0e6d72c9"
 
 keygrip@~1.0.2:
   version "1.0.2"
@@ -277,6 +327,10 @@ type-is@^1.5.5, type-is@^1.6.14:
 unpipe@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/unpipe/-/unpipe-1.0.0.tgz#b2bf4ee8514aae6165b4817829d21b2ef49904ec"
+
+uuid@^3.0.1:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.1.0.tgz#3dd3d3e790abc24d7b0d3a034ffababe28ebbc04"
 
 vary@^1.0.0:
   version "1.1.2"
